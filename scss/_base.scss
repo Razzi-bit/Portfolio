@@ -1,0 +1,40 @@
+:root {
+  //colors
+  --c-main: #2d2e32;
+  --c-d-main: #25262a;
+  --c-l-gray: #c3c3c3;
+  --c-d-gray: #6d6d6d;
+  --c-white: #fff;
+  --c-green: #62f3aa;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+// @media
+$bp-largest: 112.5em; //1800 px
+$bp-large: 68.75em; //1100 px
+$bp-medium: 56.25em; //900 px
+$bp-small: 37.5em; //600 px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  background-color: var(--c-main);
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width: var(--bp-large)) {
+    font-size: 50%;
+  }
+}
