@@ -27,7 +27,7 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: var(--bp-large)) {
+@media only screen and (max-width: 68.75em) {
   html {
     font-size: 50%;
   }
@@ -121,7 +121,7 @@ html {
   font-size: 2.5rem;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 39.375em) {
   .nav .right {
     flex-direction: column;
   }
@@ -148,35 +148,19 @@ html {
   background-color: var(--c-green);
   width: 20rem;
   border-radius: 0.5rem;
-  margin-bottom: 4rem;
-}
-
-.home .top-box h1 {
-  color: var(--c-white);
-  font-size: 4rem;
-  width: 50rem;
+  margin-bottom: 5rem;
 }
 
 .home .top-box .p {
   margin-top: 4rem;
-  color: var(--c-d-gray);
-  width: 35rem;
+  color: var(--c-white);
+  width: 45rem;
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 8rem;
 }
 
-.home .top-box a {
-  color: var(--c-green);
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-.home .top-box a:hover {
-  font-size: 2.5rem;
-}
-
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 39.375em) {
   .home .top-box {
     width: 80%;
   }
@@ -184,7 +168,7 @@ html {
 
 .home .bottom-box {
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -348,6 +332,7 @@ html {
 .overMij {
   background-color: var(--c-d-main);
   display: flex;
+  flex-direction: row-reverse;
   padding: 15rem 8rem;
 }
 
@@ -397,7 +382,7 @@ html {
   margin-top: 0.5rem;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 39.375em) {
   .overMij .left .left-container .box {
     min-width: 300px;
   }
@@ -411,23 +396,20 @@ html {
 
 .overMij .right {
   flex: 1;
-}
-
-.overMij .right .right-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .overMij .right .right-container h1 {
-  margin-top: 5rem;
   color: var(--c-white);
   font-size: 4rem;
 }
 
-.overMij .right .right-container p {
-  margin-top: 10rem;
-  color: var(--c-d-gray);
-  font-size: 2.5rem;
+@media only screen and (max-width: 68.75em) {
+  .overMij .right {
+    margin-bottom: 5rem;
+  }
 }
 
 @media only screen and (max-width: 68.75em) {
@@ -435,5 +417,118 @@ html {
     display: flex;
     flex-direction: column;
     padding: 15rem 5rem;
+  }
+}
+
+/*
+    * projecten sectie
+    *
+*/
+.projecten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 20rem;
+}
+
+.projecten .SectieNaam {
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--c-white);
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+}
+
+.projecten .p-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--c-d-main);
+  box-shadow: var(--shadow-dark);
+  border: 1px solid var(--c-main);
+  border-radius: 10px;
+  margin-bottom: 10rem;
+  max-width: 180rem;
+}
+
+.projecten .p-container .box {
+  padding: 5rem;
+}
+
+.projecten .p-container .box .slider {
+  width: 600px;
+  height: 300px;
+  animation: slider 8s infinite;
+}
+
+@media only screen and (max-width: 39.375em) {
+  .projecten .p-container .box .slider {
+    display: none;
+  }
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(../img/ecommerce-1.png);
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(../img/ecommerce-2.png);
+    background-repeat: no-repeat;
+  }
+  75% {
+    background-image: url(../img/ecommerce-3.png);
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url(../img/ecommerce-1.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.projecten .p-container .text-box {
+  padding: 0 5rem 0 0;
+}
+
+.projecten .p-container .text-box h1 {
+  color: var(--c-white);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.projecten .p-container .text-box p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: var(--c-d-gray);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.projecten .p-container .text-box a {
+  color: var(--c-green);
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 100em) {
+  .projecten .p-container {
+    flex-direction: column;
+  }
+  .projecten .p-container .text-box {
+    padding: 0 5rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .projecten {
+    padding: 3rem 0rem;
+  }
+  .projecten .p-container {
+    border-radius: 0px;
+  }
+  .projecten .p-container .box {
+    padding: 5rem 0 0 0;
+  }
+  .projecten .p-container .box .slider {
+    width: 600px;
   }
 }

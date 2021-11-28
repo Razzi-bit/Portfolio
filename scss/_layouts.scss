@@ -106,28 +106,15 @@
       background-color: var(--c-green);
       width: 20rem;
       border-radius: 0.5rem;
-      margin-bottom: 4rem;
-    }
-    h1 {
-      color: var(--c-white);
-      font-size: 4rem;
-      width: 50rem;
+      margin-bottom: 5rem;
     }
     .p {
       margin-top: 4rem;
-      color: var(--c-d-gray);
-      width: 35rem;
+      color: var(--c-white);
+      width: 45rem;
       font-size: 2rem;
       font-weight: 300;
       margin-bottom: 8rem;
-    }
-    a {
-      color: var(--c-green);
-      font-size: 2rem;
-      font-weight: 400;
-      &:hover {
-        font-size: 2.5rem;
-      }
     }
   }
   @media only screen and (max-width: $bp-small) {
@@ -137,7 +124,7 @@
   }
   .bottom-box {
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -290,6 +277,7 @@
 .overMij {
   background-color: var(--c-d-main);
   display: flex;
+  flex-direction: row-reverse;
   padding: 15rem 8rem;
   .left {
     flex: 1;
@@ -347,19 +335,19 @@
   }
   .right {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .right-container {
-      display: flex;
-      flex-direction: column;
       h1 {
-        margin-top: 5rem;
         color: var(--c-white);
         font-size: 4rem;
       }
-      p {
-        margin-top: 10rem;
-        color: var(--c-d-gray);
-        font-size: 2.5rem;
-      }
+    }
+  }
+  @media only screen and (max-width: $bp-large) {
+    .right {
+      margin-bottom: 5rem;
     }
   }
 }
@@ -370,5 +358,110 @@
     display: flex;
     flex-direction: column;
     padding: 15rem 5rem;
+  }
+}
+
+/*
+    * projecten sectie
+    *
+*/
+////////////////
+//projecten
+.projecten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 20rem;
+  .SectieNaam {
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--c-white);
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+  }
+  .p-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-d-main);
+    box-shadow: var(--shadow-dark);
+    border: 1px solid var(--c-main);
+    border-radius: 10px;
+    margin-bottom: 10rem;
+    max-width: 180rem;
+    .box {
+      padding: 5rem;
+      .slider {
+        width: 600px;
+        height: 300px;
+        animation: slider 8s infinite;
+      }
+      @media only screen and (max-width: $bp-small) {
+        .slider {
+          display: none;
+        }
+      }
+      @keyframes slider {
+        0% {
+          background-image: url(../img/ecommerce-1.png);
+          background-repeat: no-repeat;
+        }
+        25% {
+          background-image: url(../img/ecommerce-2.png);
+          background-repeat: no-repeat;
+        }
+        75% {
+          background-image: url(../img/ecommerce-3.png);
+          background-repeat: no-repeat;
+        }
+        100% {
+          background-image: url(../img/ecommerce-1.png);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    .text-box {
+      padding: 0 5rem 0 0;
+      h1 {
+        color: var(--c-white);
+        font-size: 3rem;
+        font-weight: 400;
+      }
+      p {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        color: var(--c-d-gray);
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      a {
+        color: var(--c-green);
+        font-size: 2rem;
+      }
+    }
+  }
+  @media only screen and (max-width: $bp-big) {
+    .p-container {
+      flex-direction: column;
+      .text-box {
+        padding: 0 5rem 5rem;
+      }
+    }
+  }
+}
+////////////////
+//projecten  @media
+@media only screen and (max-width: $bp-medium) {
+  .projecten {
+    padding: 3rem 0rem;
+    .p-container {
+      border-radius: 0px;
+      .box {
+        padding: 5rem 0 0 0;
+        .slider {
+          width: 600px;
+        }
+      }
+    }
   }
 }
